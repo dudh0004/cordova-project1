@@ -1,0 +1,141 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+.page {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0;
+  transform: translateX(-200%);
+}
+.page.active {
+  opacity: 1;
+  transform: translateX(0);
+  background-color: #aac9eb;
+}
+
+#add .photo-button {
+  display: block;
+}
+#add .photo-form {
+  display: none;
+}
+#add.hasPhoto .photo-button {
+  display: none;
+}
+#add.hasPhoto .photo-form {
+  display: block;
+}
+
+.page header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "btn-left title btn-right";
+  height: 1.7rem;
+  background-color: #ddd;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.64);
+}
+.page header h1 {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  grid-area: title;
+}
+#home header button {
+  font-weight: 300;
+  color: #007aff;
+  font-size: 1rem;
+  grid-area: btn-right;
+}
+#details header button,
+#add header button {
+  font-weight: 300;
+  color: #007aff;
+  font-size: 1rem;
+  grid-area: btn-left;
+}  
+
+#add.hasPhoto img{
+  width: 100%;
+}
+
+#add.hasPhoto p{
+  text-align: center;
+}
+
+#btnSave, #delete{
+    background-color: #164881;
+    color: white;
+    width: 6rem;
+    height: 1.5rem;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+figure img{
+  width: 100%;
+}
+
+#btnDelete{
+  background-color: #164881;
+  color: white;
+  width: 6rem;
+  height: 1.5rem;
+  margin-left: 150px;
+}
+
+#ratingDisplay {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#bothButtons {
+  display: block;
+}
+
+#name, #rating{
+  padding: .5rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  border-color: #020e1b;
+  margin-top: 10px;
+}
+
+#details{
+  background-color: #9cbada;
+}
+
+#imgTitle, #ratingDisplay{
+  font-size: 1.5rem;
+  color: #091d29;
+  text-align: center;
+}
+
+.review-list{
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#message{
+  font-size: 2.5rem;
+  margin-top: 100px;
+  color: blueviolet;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+    <section class="page active" id="home">
+        <header>
+            <h1>Reviews</h1>
+            <button id="btnAdd" data-target="add">+ Add</button>
+        </header>
+        <main>
+            <p id = "message"></p>
+            <ul class="review-list">
+            </ul>
+        </main>
+    </section>
+    <section class="page" id="details">
+        <header>
+            <button id="btnDetailsBack" data-target="home">&lt; Back</button>
+            <h1>Details</h1>
+        </header>
+        <main>
+        <figure>
+            <img src="" alt="" id="imgDetails" />
+            <figcaption id="imgTitle"></figcaption>
+        </figure>
+        <p id="ratingDisplay"></p>
+
+        <p><button id="btnDelete">Delete</button></p>
+        </main>
+    </section>
+    <section class="page" id="add">
+        <header>
+            <button id="btnAddBack" data-target="home">&lt; Back</button>
+            <h1>Add new Review</h1>
+        </header>
+        <main>
+        <div class="photo-form">
+            <p><img src="" alt="" id="imgAdd" /></p>
+            <p>
+                <label for="name">
+                <input type="text" id="name" placeholder="Item Name"/></label>
+            </p>
+            <p>
+                <label for="rating">
+                <input type="number" id="rating" placeholder="Give ratings from 5"/></label>
+            </p>
+            <div id="bothButtons">
+            <button id="btnSave">Save Review</button>
+            <button id="delete">Delete</button>
+            </div>
+        </div>
+    </main>
+    </section>
+    <script src="cordova.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
